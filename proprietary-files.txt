@@ -19,7 +19,7 @@ etc/acdbdata/g3/Speaker_cal.acdb
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.vendor.msm8974.so
+lib/hw/camera.msm8974.so
 lib/libAlAisLib.so
 lib/libAlAisWrap.so
 lib/libAlAisTune.so
@@ -143,7 +143,7 @@ media/DLdata_rev28B_data3.ecl:etc/firmware/DLdata_rev28B_data3.ecl
 
 # DRM
 bin/qseecomd
-lib/liboemcrypto.so
+lib/liboemcrypto.so:vendor/lib/liboemcrypto.so
 lib/drm/libfwdlockengine.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/libdrmdecrypt.so
