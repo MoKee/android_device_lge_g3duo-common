@@ -193,10 +193,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.g3 \
     init.g3.rc \
+    init.class_main.sh \
     init.g3.usb.rc \
     init.g3.usb.sh \
     init.galbi.class_core.sh \
-    init.galbi.class_main.sh \
     init.galbi.early_boot.sh \
     init.galbi-sensor.sh \
     init.galbi.sh \
