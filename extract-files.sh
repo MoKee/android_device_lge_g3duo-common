@@ -46,13 +46,13 @@ else
   fi
 fi
 
-BASE=../../../vendor/$VENDOR/g3duo-common/proprietary
+BASE=../../../vendor/$VENDOR/g3-common/proprietary
 rm -rf $BASE/*
 
 DEVBASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $DEVBASE/*
 
-extract ../../$VENDOR/g3duo-common/proprietary-files.txt $BASE
+extract ../../$VENDOR/g3-common/proprietary-files.txt $BASE
 extract ../../$VENDOR/$DEVICE/proprietary-files.txt $DEVBASE
 
 ./setup-makefiles.sh

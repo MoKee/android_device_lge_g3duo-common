@@ -393,13 +393,13 @@ on post-fs-data
 
     chmod 0660 /dev/ramdump_modem
     chown system system /dev/ramdump_modem
-    
+
     chmod 0660 /dev/ramdump_smem-modem
     chown system system /dev/ramdump_smem-modem
-    
+
     chmod 0660 /dev/ramdump_smem-smd
     chown system system /dev/ramdump_smem-smd
-    
+
     chmod 0660 /dev/ramdump_venus
     chown system system /dev/ramdump_venus
 
@@ -607,7 +607,7 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -ABDKL
     disabled
     oneshot
 
-service diagd /system/bin/diagd 
+service diagd /system/bin/diagd
     class late_start
     user root
     group radio system
@@ -784,7 +784,8 @@ service mtsd /system/bin/mtsd
     socket mtsd.port stream 660 system system
 
 service netmgrd /system/bin/netmgrd
-    class core
+    class main
+    disabled
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
@@ -854,11 +855,6 @@ service qcom-c_core-sh /system/bin/sh /init.galbi.class_core.sh
     user root
     oneshot
 
-service qcom-c_main-sh /system/bin/sh /init.galbi.class_main.sh
-    class main
-    user root
-    oneshot
-
 service qcom-sensor-sh /system/bin/sh /init.galbi-sensor.sh
     class main
     user root
@@ -879,6 +875,12 @@ service qmuxd /system/bin/qmuxd
     class core
     user radio
     group radio audio bluetooth gps qcom_diag
+    disabled
+
+service qcom-c_main-sh /system/bin/sh /init.class_main.sh
+    class main
+    user root
+    oneshot
 
 service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    user system
